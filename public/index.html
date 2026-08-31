@@ -1,12 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>It Works</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="description" content="Diablo's Realm — networking, homelab projects, tools, notes, and assorted technical nonsense." />
+  <title>Diablo's Realm</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <h1>Holy shit, it works.</h1>
-  <p>My first Cloudflare-hosted website.</p>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Diablo's Realm home">
+      <span class="brand-mark">DR</span>
+      <span>Diablo's Realm</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="#blog">Blog</a>
+      <a href="https://github.com/ChronicDiablo" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NETWORKS · HOMELAB · AUTOMATION · QUESTIONABLE IDEAS</p>
+        <h1>Welcome to<br><span>Diablo's Realm.</span></h1>
+        <p class="hero-text">
+          A personal corner of the internet for networking notes, homelab projects,
+          useful tools, technical rabbit holes, and whatever else seemed like a good idea at the time.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">See what I'm building</a>
+          <a class="button secondary" href="#tools">Open the toolbox</a>
+        </div>
+      </div>
+
+      <aside class="terminal-card" aria-label="Terminal inspired site summary">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <p>realm@home:~</p>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="output">network engineer / homelab tinkerer</p>
+          <p><span class="prompt">$</span> uptime</p>
+          <p class="output">longer than the R710 deserves</p>
+          <p><span class="prompt">$</span> cat mission.txt</p>
+          <p class="output">make useful things. break fewer things.</p>
+          <p><span class="prompt">$</span> <span class="cursor">█</span></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Built for the stuff I actually care about.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            This site is equal parts notebook, launchpad, and excuse to keep building things.
+            Expect networking, infrastructure, self-hosting, troubleshooting writeups, and the occasional
+            rant about technology that should have worked the first time.
+          </p>
+          <p>
+            Nothing here is trying to become a startup. If it solves a problem, teaches me something,
+            or makes the homelab a little more ridiculous, it probably belongs here.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>L2 / L3</strong>
+            <span>Where life makes sense</span>
+          </div>
+          <div class="stat">
+            <strong>Homelab</strong>
+            <span>Production, but with worse change control</span>
+          </div>
+          <div class="stat">
+            <strong>Cloudflare</strong>
+            <span>Because exposing ports is overrated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">02 / PROJECTS</p>
+        <h2>Things currently consuming electricity.</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="card feature-card">
+          <div class="card-icon">↗</div>
+          <p class="card-kicker">CURRENT PROJECT</p>
+          <h3>This website</h3>
+          <p>
+            Static site on Cloudflare Workers, deployed from GitHub, because apparently
+            one harmless little homepage required a CI/CD pipeline and a DDNS migration.
+          </p>
+          <span class="tag">Cloudflare</span>
+          <span class="tag">GitHub</span>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">⌂</div>
+          <p class="card-kicker">HOMELAB</p>
+          <h3>Home infrastructure</h3>
+          <p>
+            Servers, containers, networking, reverse proxies, VPNs, storage, and a collection
+            of services that absolutely could have been simpler.
+          </p>
+          <span class="tag">Unraid</span>
+          <span class="tag">Docker</span>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">◎</div>
+          <p class="card-kicker">NETWORKING</p>
+          <h3>Lab & field notes</h3>
+          <p>
+            Useful commands, migration notes, weird edge cases, and the kind of troubleshooting
+            knowledge that normally gets rediscovered at 2 AM.
+          </p>
+          <span class="tag">Cisco</span>
+          <span class="tag">Meraki</span>
+          <span class="tag">Fortinet</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="section-heading">
+        <p class="eyebrow">03 / TOOLS</p>
+        <h2>Useful doors into the realm.</h2>
+      </div>
+
+      <div class="tool-grid">
+        <a class="tool-card" href="https://speedtest.diablosrealm.com" target="_blank" rel="noreferrer">
+          <div>
+            <span class="tool-icon">◉</span>
+            <h3>Speedtest</h3>
+            <p>Self-hosted network speed test.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="tool-card" href="https://requests.diablosrealm.com" target="_blank" rel="noreferrer">
+          <div>
+            <span class="tool-icon">▶</span>
+            <h3>Requests</h3>
+            <p>Media request portal.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="tool-card" href="https://plex.diablosrealm.com" target="_blank" rel="noreferrer">
+          <div>
+            <span class="tool-icon">▸</span>
+            <h3>Plex</h3>
+            <p>Home media server.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="tool-card" href="https://github.com/ChronicDiablo" target="_blank" rel="noreferrer">
+          <div>
+            <span class="tool-icon">{ }</span>
+            <h3>GitHub</h3>
+            <p>Code, configs, and future bad ideas.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <p class="fine-print">
+        Some services may require authentication or may not be intended for general public access.
+      </p>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="section-heading">
+        <p class="eyebrow">04 / BLOG</p>
+        <h2>Notes from the troubleshooting mines.</h2>
+      </div>
+
+      <div class="blog-grid">
+        <article class="post-card">
+          <p class="post-meta">COMING SOON · NETWORKING</p>
+          <h3>Things I wish vendors would stop making difficult</h3>
+          <p>A completely calm and professional collection of infrastructure grievances.</p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">COMING SOON · HOMELAB</p>
+          <h3>Keeping old enterprise hardware alive against its will</h3>
+          <p>Power bills, questionable drives, and the enduring spirit of "it still works."</p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">COMING SOON · NOTES</p>
+          <h3>Commands worth remembering so I don't have to</h3>
+          <p>A searchable place for the useful little things that never stay in memory.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Diablo's Realm</strong>
+      <p>Built on Cloudflare. Fueled by curiosity and unnecessary infrastructure.</p>
+    </div>
+    <p class="footer-note">Holy shit, it still works.</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
